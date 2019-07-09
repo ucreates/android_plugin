@@ -11,42 +11,16 @@ Android plugin supported Android6.0 Later.
 ## Usage
 ***Notes on use for Android***
 
-1.Add to your build.gradle(appproject).
-
-```
-buildscript {
-    repositories {
-        ・
-        ・
-        ・
-        maven { url "https://github.com/layerhq/releases-gradle/raw/master/releases" }
-        ・
-        ・
-        ・
-    }
-    dependencies {
-        ・
-        ・
-        ・
-        classpath group: 'com.layer', name: 'git-repo-plugin', version: '1.0.0'
-        ・
-        ・
-        ・
-    }
-}
-```
-
-2.Add to your build.gradle(app).
+1.Add to your build.gradle(app).
 
 - Java
 
 ```
-apply plugin: 'git-repo'
 ・
 ・
 ・
 repositories {
-    github("ucreates", "android_plugin", "master", "repository/java")
+    url 'https://github.com/ucreates/android_plugin/raw/master/repository/java/'
 }
 ・
 ・
@@ -59,12 +33,11 @@ dependencies {
 - Kotlin
 
 ```
-apply plugin: 'git-repo'
 ・
 ・
 ・
 repositories {
-    github("ucreates", "android_plugin", "master", "repository/kotlin")
+    url 'https://github.com/ucreates/android_plugin/raw/master/repository/kotlin/'
 }
 ・
 ・
@@ -74,6 +47,6 @@ dependencies {
 }    
 ```
 
-3.Sync gradle in your Android project.
+2.Sync gradle in your Android project.
 
-4.Build and Running Android Plugin on your Android Client App.
+3.Build and Running Android Plugin on your Android Client App.
